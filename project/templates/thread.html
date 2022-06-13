@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Thread
+{% endblock %}
+
+{% block main %}
+
+<div class="content-0-2-160 margins-0-2-161" style="display: block">
+
+            <div>
+                <p class="title">Thread</p>
+                <hr>
+            </div>
+
+            <div class="root-0-2-237">
+
+            <div class="form-post">
+                {% for post in posts %}
+                    <p class="post-style">
+                        <span style="color:black; font-weight: bold;"> {{ post["user"] }}: </span>
+                        {{ post["post"] }}
+                        <br>
+                        {% if post["user_id"] == session["user_id"] %}
+                        <form action="/delete" method="post">
+                            <input name="id" type="hidden" value="{{ post.id }}">
+                            <input type="submit" value="delete post">
+                        </form>
+                        {% endif %}
+                        <br>
+                        <form action="/reply" method="post">
+                            <div class="form-group">
+                                <input name="id" type="hidden" value="{{ post.id }}">
+                                <input name="user" type="hidden" value="{{ post.user }}">
+                                <input autocomplete="off" autofocus class="input-style" id="reply" name="reply" type="text">
+                                <button class="btn btn-primary" type="submit">Reply</button>
+                            </div>
+                        </form>
+                        <div style="color:red;">{{ apple }}</div>
+                    </p>
+              {% endfor %}
+
+              {% for reply in replies %}
+                    <p class="post-style">
+                        <span style="color:black;"> {{ reply["user"] }}: </span>
+                        {{ reply["reply"] }}
+
+                        {% if reply["user_id"] == session["user_id"] %}
+                        <form action="/unreply" method="post">
+                            <input name="reply_id" type="hidden" value="{{ reply.id }}">
+                            <input name="post_id" type="hidden" value="{{ reply.post_id }}">
+                            <input name="user_id" type="hidden" value="{{ reply.user_id }}">
+                            <button class="btn btn-primary" type="submit">delete reply</button>
+                        </form>
+                        {% endif %}
+                    </p>
+
+              {% endfor %}
+            </div>
+        </div>
+
+            </div>
+
+
+{% endblock %}

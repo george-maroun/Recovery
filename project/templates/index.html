@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recovery
+{% endblock %}
+
+{% block main %}
+
+<div class="content-0-2-160 margins-0-2-161" style="display: block">
+
+
+                <div class="box-text text-center">
+                    <p>
+                        Welcome!
+                    </p>
+                </div>
+
+                {% if session["user_id"] %}
+                        <div class="box-text2 text-center">
+                            <p>
+                                Access the <a style="text-decoration: none!important;" class="box-text2link" href="/forum">forum</a> to ask questions or search existing posts
+
+                            </p>
+                        </div>
+                    {% else %}
+                        <div class="box-text2 text-center">
+                            <p>
+                                <a style="text-decoration: none!important;" class="box-text2link" href="/login">Login</a> or <a style="text-decoration: none!important;" class="box-text2link" href="/register">register</a> to ask questions <br> and share tips with other <br> patients
+                            </p>
+                        </div>
+                    {% endif %}
+                <div class="center">
+                    <img src="https://pbs.twimg.com/media/FSLhrUtX0AUUjAa?format=jpg&name=small" alt="cooperation" style="width:100px; heigh:100px;">
+
+                    <div style="height: 1.3rem; width: 24px; flex-shrink: 0;"></div>
+                    <a href="#posts"><img src="https://cdn2.iconfinder.com/data/icons/arrows-set-8/100/expand_arrow-512.png" alt="cooperation" style="width:100px; heigh:100px;"></a>
+
+                    </div>
+                    <div style="height: 4rem; width: 24px; flex-shrink: 0;"></div>
+
+                    <div class="content-0-2-160 margins-0-2-161" style="display: block">
+                    <div id="posts">
+                        <p class="title">Posts</p>
+                        <hr>
+                    </div>
+                    <div class="root-0-2-237">
+
+                    <div class="form-post">
+                        {% for post in posts %}
+                            <p class="post-style">
+                                <span style="color:black; font-weight: bold;"> {{ post["user"] }}: </span>
+                                {{ post["post"] }}
+                            </p>
+                      {% endfor %}
+                    </div>
+                </div>
+
+
+
+                </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recovery
+{% endblock %}
+
+{% block main %}
+
+<div class="content-0-2-160 margins-0-2-161" style="display: block">
+
+
+                <div class="box-text text-center">
+                        Forum
+                </div>
+                <div class="box-text2 text-center">
+                        Ask a question or search existing posts
+                </div>
+
+                <div class="root-0-2-237">
+                <form class="form-0-2-238" action="/search" method="post">
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="input-style" id="search" placeholder="search e.g.: eczema" name="search" type="text">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                    <div>
+                        <p style="color: red;">{{ search_error }}</p>
+                    </div>
+                </form>
+                <div style="height: 0px; width: 24px; flex-shrink: 0;"></div>
+                <form class="form-0-2-238" action="/post" method="post">
+                    <div class="form-group">
+                        <input autocomplete="off" class="input-style" id="post" placeholder="ask something" name="post" type="text">
+                        <button class="btn btn-primary" type="submit">Post</button>
+                    </div>
+                    <div>
+                        <p style="color: red;">{{ post_error }}</p>
+                    </div>
+                </form>
+
+            </div>
+            <div>
+                <p class="title">Posts</p>
+                <hr>
+            </div>
+            <div class="root-0-2-237">
+
+            <div class="form-post">
+                {% for post in posts %}
+                    <p class="post-style">
+                        <span style="color:black; font-weight: bold;"> {{ post["user"] }}: </span>
+                        {{ post["post"] }}
+                        <form action="/thread" method="post">
+                            <input name="id" type="hidden" value="{{ post['id'] }}">
+                            <input class="reply" type="submit" value="View">
+                        </form>
+                    </p>
+              {% endfor %}
+            </div>
+        </div>
+        <div style="color:red;">{{ apple }}</div>
+
+
+
+            </div>
+
+
+{% endblock %}

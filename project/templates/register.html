@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="content-0-2-160 margins-0-2-161" style="display: block">
+    <div class="root-0-2-237">
+
+    <form class="form-0-2-238" action="/register" method="post">
+        <div>
+            <p class="title">
+                Sign up
+            </p>
+        </div>
+        <div class="form-group">
+            <label id="description" for="exampleInputUsername">Username</label>
+            <input autocomplete="off" autofocus class="input-style" id="username" name="username" type="text">
+        </div>
+        <div style="height: 10px; width: 24px; flex-shrink: 0;"></div>
+        <div class="form-group">
+            <label id="description" for="exampleInputPassword">Password</label>
+            <input autocomplete="off" class="input-style" id="password" name="password" type="password">
+        </div>
+        <div style="height: 10px; width: 24px; flex-shrink: 0;"></div>
+        <div class="form-group">
+            <label id="description" for="exampleInputConfirmation">Re-type password</label>
+            <input autocomplete="off" lass="input-style" id="confirmation" name="confirmation" type="password">
+        </div>
+        <div style="height: 20px; width: 24px; flex-shrink: 0;"></div>
+        <button class="btn btn-primary" type="submit">Sign up</button>
+        <div>
+            <p style="color: red;">{{error}}</p>
+        </div>
+    </form>
+
+    </div>
+
+</div>
+{% endblock %}
+

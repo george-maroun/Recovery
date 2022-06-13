@@ -1,0 +1,205 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #00bfb5;
+    font-weight: bold;
+}
+
+nav .container-fluid
+{
+    width: 99%;
+}
+
+main .container-fluid
+{
+    padding-right: none!important;
+    padding-left: none!important;
+}
+
+main .py-5 {
+    padding-top: none!important;
+}
+
+
+.btn-primary
+{
+    color: white;
+    background-color: #00bfb5;
+    border-color: #00bfb5;
+}
+
+.btn-primary:hover
+{
+    color: white;
+    background-color: #00b0a6;
+    border-color: #00a198;
+}
+
+.title
+{
+    text-align: center;
+    color: #1c1c1c;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title2
+{
+    text-align: left;
+    color: #1c1c1c;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 2.6rem;
+}
+
+
+.root-0-2-237
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.margins-0-2-161
+{
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.form-0-2-238
+{
+    width: 480px;
+    display: flex;
+    padding: 48px 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-post
+{
+    display: flex;
+    padding: 48px 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-style
+{
+    width: 550px;
+    color: gray;
+    font-size: 20;
+    padding: 1.8rem;
+    background-color: #f2f2f2;
+    border-radius: 0.25rem;
+}
+
+.comment-style
+{
+    width: 600px;
+    color: black;
+    font-weight: bold;
+    font-size: 17;
+    padding: 1.2rem;
+    padding-left: 2rem;
+    background-color: #f2f2f2;
+    border-radius: 0.25rem;
+}
+
+.input-style
+{
+    display: block;
+    width: 100%;
+    padding: 0.9rem 0.9rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f2f2f2;
+    background-clip: padding-box;
+    border: 0px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+}
+
+#description
+{
+    text-align: left!important;
+}
+
+.box
+{
+    background-image: linear-gradient(to bottom, #00bfb5, white);
+    height: 100px;
+    width:100%;
+}
+
+.box-text
+{
+    font-size: 70px;
+    color: #00bfb5;
+    font-weight: bold;
+}
+
+.box-text2
+{
+    font-size: 30px;
+    color: #a6bfbf;
+    font-weight: bold;
+}
+
+.box-text2link
+{
+    font-size: 30px;
+    color: #7999a3;
+    font-weight: bold;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12%;
+  }
+
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.vertical {
+    border-left: 1px solid silver;
+    height: 400px;
+    position:absolute;
+    left: 50%;
+}
+
+.reply
+{
+    border: none;
+    border-radius: 1.5px;
+    background-color: rgb(236, 236, 236);
+    font-size: 15px;
+    color: #7999a3;
+    font-weight: bold;
+}
